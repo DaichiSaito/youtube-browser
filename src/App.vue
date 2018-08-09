@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Screen test</h1>
+    <h1>Vue YouTube Application</h1>
   </div>
 </template>
 
