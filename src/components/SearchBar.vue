@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input v-on:input="onInput"/>
+    <input @input="onInput"/>
   </div>
 </template>
 
