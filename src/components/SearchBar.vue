@@ -1,12 +1,17 @@
 <template>
   <div class="search">
-    <input type="text">
+    <input v-on:input="onInput"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SearchBar'
+  name: 'SearchBar',
+  methods: {
+    onInput: function(e) {
+      console.log(e.target.value)
+    }
+  }
 }
 </script>
 
