@@ -5,8 +5,11 @@
 </template>
 
 <script>
+import axios from 'axios' // library for processing search
 import SearchBar from './components/SearchBar' // Make SearchBar component available to template
-const API_KEY = 'API_KEY HERE'
+
+
+const API_KEY = 'API KEY HERE'
 
 export default {
   name: 'App',
@@ -15,7 +18,15 @@ export default {
   },
   methods: {
     onTermChange(searchTerm) {
-      console.log(searchTerm)
+      axios.get('https://www.googleapis.com/youtube/v3/search', {
+        params: {
+          key: API_KEY,
+          type: 'video', // type of data to retrieve
+          part: 'snippet', // ask for a small portion of each video returned in search
+          q: searchTerm // q = query, which will be the searchTerm passed to the method
+        }
+      }) // returns a promise
+      .then(response => console.log(response))
     }
   }
 }
