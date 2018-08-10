@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 
+
 new Vue({
     // DOM element into which Vue should render App.vue code
     // this is an alternate to the .$mount() method used below

@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <h1>Vue YouTube Application</h1>
+    <SearchBar></SearchBar>
   </div>
 </template>
 
 <script>
+import SearchBar from './components/SearchBar' // Make SearchBar component available to template
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { // register any components being used
+    SearchBar 
+  }
 }
 </script>
 
