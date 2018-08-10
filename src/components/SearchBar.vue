@@ -9,8 +9,8 @@ export default {
   name: 'SearchBar',
   methods: {
     onInput: function(e) {
-      let inputValue = e.target.value
-      this.$emit('termChange', inputValue) // $ sign is insignificant, no functionality, just Vue convention
+      let searchTerm = e.target.value
+      this.$emit('termChange', searchTerm) // $ sign is insignificant, no functionality, just Vue convention
     }
   }
 }
