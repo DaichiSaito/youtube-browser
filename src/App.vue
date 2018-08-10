@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoList></VideoList>
-    {{ videos.length }}
+    <VideoList :videos="videos"></VideoList>
   </div>
 </template>
 
@@ -20,7 +19,7 @@ export default {
     SearchBar,
     VideoList
   },
-  data() { // in a component, the data property must be a function that returns and object
+  data() { // in a component, the data property must be a FUNCTION that returns an object
     return {
       videos: []
     }
