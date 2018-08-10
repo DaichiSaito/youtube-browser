@@ -6,6 +6,7 @@
 
 <script>
 import SearchBar from './components/SearchBar' // Make SearchBar component available to template
+const API_KEY = 'API_KEY HERE'
 
 export default {
   name: 'App',
