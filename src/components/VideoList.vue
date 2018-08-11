@@ -1,5 +1,5 @@
 <template>
-  <ul class="list-group">
+  <ul class="list-group list-unstyled">
     <VideoListItem 
       v-for="video in videos"
       :video="video"

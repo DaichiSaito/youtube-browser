@@ -1,7 +1,9 @@
 <template>
-  <li class="list-group-item">
-    <img :src="thumbnailUrl" />
-    {{ videoTitle }}
+  <li class="list-group-item media layout">
+    <img :src="thumbnailUrl" class="mr-3"/>
+    <div class="media-body">
+      {{ videoTitle }}
+    </div>
   </li>
 </template>
 
@@ -24,7 +26,14 @@ export default {
 </script>
 
 <style>
+  .layout {
+    display: flex;
+    cursor: pointer;
+  }
 
+  .layout:hover {
+    background-color: #eee;
+  }
 </style>
 
 
