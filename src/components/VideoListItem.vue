@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     onVideoSelect() {
-      
+      this.$emit('videoSelect', this.video) // emitter being listened for in VideoList component
     }
   }
 }
