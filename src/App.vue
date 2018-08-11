@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
+    <VideoDetail :video="selectedVideo" />
     <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
   </div>
 </template>
@@ -9,6 +10,7 @@
 import axios from 'axios' // library for processing search
 import SearchBar from './components/SearchBar' // Make SearchBar component available to template
 import VideoList from './components/VideoList' // Make VideoList component available
+import VideoDetail from './components/VideoDetail' // Make VideoDetail component available
 
 
 const API_KEY = 'API_KEY_HERE'
@@ -17,16 +19,18 @@ export default {
   name: 'App',
   components: { // register any components being used
     SearchBar,
-    VideoList
+    VideoList,
+    VideoDetail
   },
   data() { // in a component, the data property must be a FUNCTION that returns an object
     return {
-      videos: []
+      videos: [],
+      selectedVideo: null
     }
   },
   methods: {
     onVideoSelect(video) {
-      console.log(video)
+      this.selectedVideo = video
     },
     onTermChange(searchTerm) {
       axios.get('https://www.googleapis.com/youtube/v3/search', {
