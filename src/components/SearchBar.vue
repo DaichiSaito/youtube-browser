@@ -16,6 +16,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  input {
+    width: 75%;
+  }
+  .search {
+    text-align: center;
+    margin: 20px;
+  }
 </style>
