@@ -1,5 +1,5 @@
 <template>
-  <li class="list-group-item media layout">
+  <li class="list-group-item media layout" @click="onVideoSelect">
     <img :src="thumbnailUrl" class="mr-3"/>
     <div class="media-body">
       {{ videoTitle }}
@@ -20,6 +20,11 @@ export default {
     },
     videoTitle() {
       return this.video.snippet.title
+    }
+  },
+  methods: {
+    onVideoSelect() {
+      
     }
   }
 }
