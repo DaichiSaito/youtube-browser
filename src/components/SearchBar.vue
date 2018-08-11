@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <input @input="onInput"/>
+    <input @input="onInput" class="user-input"/>
   </div>
 </template>
 
@@ -16,8 +16,8 @@ export default {
 }
 </script>
 
-<style scoped>
-  input {
+<style>
+  .user-input {
     width: 75%;
   }
   .search {
