@@ -1,7 +1,7 @@
 <template>
   <li class="list-group-item">
-    <img :src="video.snippet.thumbnails.default.url" />
-    {{ video.snippet.title }}
+    <img :src="thumbnailUrl" />
+    {{ videoTitle }}
   </li>
 </template>
 
@@ -11,7 +11,15 @@
 // snippet.title (above in template) is a property of the indiv video
 export default {
   name: 'VideoListItem',
-  props: ['video']
+  props: ['video'],
+  computed: {
+    thumbnailUrl() { // returns a thumbnail img for use in template above
+      return this.video.snippet.thumbnails.default.url
+    },
+    videoTitle() {
+      return this.video.snippet.title
+    }
+  }
 }
 </script>
 
